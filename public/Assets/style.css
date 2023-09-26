@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+    background:white;
+    overflow-x: hidden;
+}
+
+  /* Gaya untuk tombol "About US" */
+  .about-us-link {
+    color: black; /* Warna teks menjadi hitam */
+    text-decoration: none; /* Menghapus garis bawah default */
+    transition: color 0.3s; /* Efek transisi ketika warna teks berubah */
+    border-bottom: 2px solid transparent; /* Tambahkan garis bawah dengan ketebalan 2px (transparent untuk saat normal) */
+  }
+
+  /* Gaya saat tombol dihover */
+  .about-us-link:hover {
+    color: #D6A676; /* Ubah warna teks menjadi oranye saat tombol dihover */
+    border-bottom-color: #D6A676; /* Ubah warna garis bawah menjadi oranye saat tombol dihover */
+    padding-bottom: 5px; /* Tambahkan jarak 5px antara teks dan garis bawah */
+  }
+
+  .nav-on{
+    color: #D6A676; /* Ubah warna teks menjadi oranye saat tombol dihover */
+    border-bottom-color: #D6A676; /* Ubah warna garis bawah menjadi oranye saat tombol dihover */
+    padding-bottom: 5px;
+  }
+
+  .bg-green{
+    background-color: #586d34;
+  }
+
+  .content-text{
+    color: white;
+    font-size: small;
+  }
+
+  .custom-hr {
+    border: none;
+    background-color: #D6A676;
+    height: 2px;
+    width: 100px; /* Sesuaikan lebar garis bawah dengan panjang tulisan "With" */
+    margin: 0 auto; /* Agar garis bawah berada di tengah */
+  }
+  .custom-hr2 {
+    border: none;
+    background-color: #A16500;
+    height: 2px;
+    width: 100px; /* Sesuaikan lebar garis bawah dengan panjang tulisan "With" */
+    margin: 0 auto; /* Agar garis bawah berada di tengah */
+  }
+
+  .card {
+    max-width: 18rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Gaya untuk card gambar - mengatur posisi tengah secara horizontal dan vertikal */
+  .card-img-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Gaya untuk teks pada kolom kanan */
+  .col-md-6 {
+    text-align: left;
+  }
+
+  .conwel{
+    padding-top: 250px;
+    padding-bottom: 250px;
+    color: white;
+    background-image: url("/Assets/head.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  /* Gaya untuk judul "Get Closer with Us" */
+  h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+ input.placeholder{
+  color:#A16500 ;
+ }
+ input{
+  color: #A16500;
+ }
+
+ .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #D0B280;
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #D0B280;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+  color: #D0B280;
+}
+
+  /* Gaya untuk HR (garis bawah) */
+  hr {
+    border-style: solid;
+  }
+
+  /* Gaya untuk paragraf */
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Gaya untuk judul "More About Us" dan "Check Our Products" */
+  h5:last-child {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  @media (max-width: 767px) {
+    /* Gaya khusus untuk tampilan di ukuran layar < 768px (tablet dan di bawahnya) */
+    .col-md-6 {
+      text-align: center;
+    }
+  }
+
+  .bg-putih{
+    background-color: #D9D9D9;
+  }
+
+  .color-text{
+    color: #A16500;
+  }
+
+.btn-products{
+  background-color: #A16500;
+  color: white;
+}
+.btn-more{
+  background-color: #D6A676;
+  color: white;
+}
+
+
+/* responsive CSS */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.card {
+		margin-bottom: 30px;
+	}
+	.img-area img {
+		width: 100%;
+	}
+    .container-vimis{
+        padding: 50px;
+        background-image: url("https://images.unsplash.com/photo-1546662608-aec5228e9a74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+@media only screen and (max-width: 767px) {
+	.navbar-nav {
+		text-align: center;
+	}
+	.about-text {
+		padding-top: 50px;
+	}
+	.card {
+		margin-bottom: 30px;
+	}
+    .container-vimis{
+        padding: 20px;
+        background-image: url("https://images.unsplash.com/photo-1546662608-aec5228e9a74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
