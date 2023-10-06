@@ -19,9 +19,7 @@ use App\Http\Controllers\RegisterController;
 Route::get('/', function () {
     return view('landing.profile');
 });
-Route::get('/catalog', function () {
-    return view('landing.catalog');
-});
+Route::get('/catalog', [CatalogController::class,'index'])->name('index');
 
 Route::get('/login', [LoginController::class, 'index'])->name('index');
 Route::post('/login', [LoginController::class, 'login'])->name('login');

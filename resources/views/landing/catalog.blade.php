@@ -2,44 +2,32 @@
 
 @section('content')
 <h1 class="text-center bg-green " style="color: white">CATALOG</h1>
-    <div class="container text-center">
+    <div class="container ">
         <div class="row justify-content-center ">
-            <div class="col">
-              <div class="card">
-                <img src="Assets/image.png" class="card-img-top " alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            @foreach ($catalogs as $catalog)
+              <div class="col">
+                <div class="card">
+                  <img src="uploads/{{ $catalog->picture }}" class="card-img-top" style="width:100px">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">{{ $catalog->name }}</h5>
+                    <table>
+                      <tr>
+                        <th>Type</th>
+                        <th>: {{ $catalog->type }}</th>
+                      </tr>
+                      <tr>
+                        <th>Specification</th>
+                        <th>: {{ $catalog->specification }}</th>
+                      </tr>
+                      <tr>
+                        <th>Price</th>
+                        <th>: {{ $catalog->price }}</th>
+                      </tr>                      
+                    </table>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="card" >
-                <img src="Assets/image_1.png" class="card-img-top img-fluid" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
     </div>

@@ -64,7 +64,7 @@
             </ul>
           </li> --}}
           <li class="nav-item">
-            <a href="dashboard/create" class="nav-link">
+            <a href="{{ route('dashboard.create') }}" class="nav-link">
               <i class="fas fa-solid fa-plus"></i>&nbsp;
               <p>
                Add Catalog
