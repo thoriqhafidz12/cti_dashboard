@@ -21,6 +21,7 @@ body{
     border-bottom-color: #D6A676; /* Ubah warna garis bawah menjadi oranye saat tombol dihover */
     padding-bottom: 5px; /* Tambahkan jarak 5px antara teks dan garis bawah */
   }
+  
 
   .nav-on{
     color: #D6A676; /* Ubah warna teks menjadi oranye saat tombol dihover */
@@ -138,7 +139,7 @@ body{
   }
 
 .btn-products{
-  background-color: #A16500;
+  background-color: hsl(38, 100%, 32%);
   color: white;
 }
 .btn-more{

@@ -9,22 +9,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link about-us-link" aria-current="page" href="#about">About Us</a>
+            <a class="nav-link about-us-link" aria-current="page" href="/">About Us</a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link about-us-link" href="#products">Products</a>
           </li>
           <li class="nav-item">
             <a class="nav-link about-us-link" href="#values">Values</a>
-          </li>
+          </li> --}}
           <li class="nav-item">
-            <a class="nav-link about-us-link" href="#gallery">Gallery</a>
+            <a class="nav-link about-us-link" href="{{ route('catalog') }}">Catalog</a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link about-us-link" href="#contacts">Contacts</a>
-          </li>
+          </li> --}}
           <li class="nav-item">
-            <a class="btn btn-warning" href="/login">SIGN IN</a>
+            <a class="btn" href="/login" style="background-color: #a36700;color:white">SIGN IN</a>
           </li>
         </ul>
       </div>

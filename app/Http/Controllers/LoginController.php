@@ -12,7 +12,7 @@ class LoginController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function login_form()
     {
         if (Auth::check()) {
             return redirect('/dashboard');
@@ -32,7 +32,7 @@ class LoginController extends Controller
         ];
 
         if (Auth::Attempt($data)) {
-            return redirect('/dashboard');
+            return redirect('dashboard');
         }else{
             Session::flash('error', 'Email atau Password Salah');
             return redirect('/login');

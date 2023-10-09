@@ -15,10 +15,14 @@ class CatalogController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+     public function menu() {
+        return view ('dashboard/index');   
+    }
     public function index()
     {
         $catalogs = CatalogModel::latest()->paginate(5);
-        return view('landing.catalog',compact('catalogs'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('dashboard.catalog.index',compact('catalogs'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -96,32 +100,57 @@ class CatalogController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(CatalogModel $catalogModel)
+    public function show(CatalogModel $catalog)
     {
-        //
+        return view('dashboard.catalog.show',compact('catalog'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(CatalogModel $catalogModel)
+    public function edit(CatalogModel $catalog)
     {
-        //
+        return view('dashboard.catalog.edit',compact('catalog'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, CatalogModel $catalogModel)
+    public function update(Request $request, CatalogModel $catalog)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'type' => 'required',
+            'specification' => 'required',
+            'price' => 'required',
+            'picture' => 'required|mimes:jpg,jpeg,png,heic|max:2048'
+        ]);
+      
+        $catalog->update($request->all());
+      
+        return redirect()->route('catalog.index')
+                        ->with('success','produk updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(CatalogModel $catalogModel)
+    public function destroy($id)
     {
-        //
+        $catalogs = CatalogModel::find($id);
+
+        if($catalogs) {
+            $picture = public_path('/uploads/' . $catalogs->picture);
+
+            if(File::exists($picture)) {
+                File::delete($picture);
+            }
+
+            $catalogs->delete();
+
+            return redirect()->back()->with('message', 'Berhasil, file berhasil dihapus');
+        }
+
+        return redirect()->back()->with('message', 'Error, tidak ada file ditemukan');
     }
 }

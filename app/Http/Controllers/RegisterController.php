@@ -12,7 +12,7 @@ class RegisterController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function register_form()
     {
         return view ('auth/register');
     }

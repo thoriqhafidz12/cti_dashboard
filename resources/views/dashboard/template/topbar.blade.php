@@ -129,7 +129,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ route('logout') }}" role="button">
-          <i class="fas fa-th-large"></i>
+          <i class="fas fa-solid fa-power-off"></i>
         </a>
       </li>
     </ul>

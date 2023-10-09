@@ -48,7 +48,7 @@
             </form>
 
             <div class="container text-center my-2">
-                <a href="/register" class="btn btn-danger text-center">Register a new membership</a>
+                <a href="{{ route('register_form') }}" class="btn btn-danger text-center">Register a new membership</a>
             </div>
         </div>
         <!-- /.card-body -->
