@@ -1,14 +1,14 @@
 @extends('landing.index')
 
 @section('content')
-<h1 class="text-center bg-green " style="color: white">CATALOG</h1>
+  <h1 class="text-center bg-green " style="color: white">CATALOG</h1>
     <div class="container ">
         <div class="row justify-content-center ">
             @foreach ($catalogs as $catalog)
               <div class="col">
-                <div class="card">
-                  <img src="uploads/{{ $catalog->picture }}" class="card-img-top" style="width:100px">
-                  <div class="card-body">
+                <div class="card my-2" style="width: 18rem">
+                  <img src="uploads/{{ $catalog->picture }}" class="card-img-top" style="max-width: 385px;max-height: 385px">
+                  
                     <h5 class="card-title text-center">{{ $catalog->name }}</h5>
                     <table>
                       <tr>
@@ -24,7 +24,6 @@
                         <th>: {{ $catalog->price }}</th>
                       </tr>                      
                     </table>
-                  </div>
                 </div>
               </div>
             @endforeach
