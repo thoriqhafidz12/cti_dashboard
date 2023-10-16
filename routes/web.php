@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\KeranjangController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\RegisterController;
@@ -30,3 +31,5 @@ Route::post('/register_user', [RegisterController::class, 'register'])->name('re
 Route::get('/dashboard', [CatalogController::class,'menu'])->name('menu')->middleware('auth');
 
 Route::resource('dashboard/catalog', CatalogController::class )->middleware('auth');
+
+Route::get('/keranjang', [KeranjangController::class, 'barang']);
