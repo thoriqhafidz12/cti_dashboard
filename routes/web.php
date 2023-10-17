@@ -18,7 +18,7 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::get('/', [LandingController::class, 'index']);
+Route::get('/', [LandingController::class, 'index'])->name('landing');
 Route::get('/catalog', [LandingController::class,'catalog'])->name('catalog');
 
 Route::get('/login', [LoginController::class, 'login_form'])->name('login_form');
@@ -32,4 +32,5 @@ Route::get('/dashboard', [CatalogController::class,'menu'])->name('menu')->middl
 
 Route::resource('dashboard/catalog', CatalogController::class )->middleware('auth');
 
-Route::get('/keranjang', [KeranjangController::class, 'barang']);
+Route::get('/keranjang', [KeranjangController::class, 'barang'])->name('keranjang')->middleware('CheckAdmin');
+Route::get('/checkout', [KeranjangController::class, 'checkout'])->name('checkout')->middleware('CheckAdmin');
