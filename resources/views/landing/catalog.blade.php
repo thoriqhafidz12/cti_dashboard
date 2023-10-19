@@ -41,7 +41,7 @@
     </div>
     <div class="row text-center">
       <div class="col">
-        <a href="products.html" class="btn btn-warning my-4 text-center" style="color:white">See More</a></div>
+        <a href="{{ route('list') }}" class="btn btn-warning my-4 text-center" style="color:white">See More</a></div>
     </div>
   </div>
 
@@ -57,39 +57,7 @@
           <img src="https://images.unsplash.com/photo-1602037348227-c874695ca678?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29hbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" style="max-height: 500px; max-width:500px">
         </div>
       </div>
-    </div>
-
-  <div class="container-fluid">
-    <div class="row justify-content-center ">
-        @foreach ($catalogs as $catalog)
-          <div class="col">
-            <div class="card my-2" style="width: 18rem">
-              <img src="uploads/{{ $catalog->picture }}" class="card-img-top" style="max-width: 385px;max-height: 385px">
-              
-                <h5 class="card-title text-center">{{ $catalog->name }}</h5>
-                <table>
-                  <tr>
-                    <th>Type</th>
-                    <th>: {{ $catalog->type }}</th>
-                  </tr>
-                  <tr>
-                    <th>Specification</th>
-                    <th>: {{ $catalog->specification }}</th>
-                  </tr>
-                  <tr>
-                    <th>Price</th>
-                    <th>: {{ $catalog->price }}</th>
-                  </tr>                      
-                </table>
-            </div>
-          </div>
-        @endforeach
-      </div>
-    </div>
-  </div>
-
-   
-    
+    </div>  
     
 @endSection
     

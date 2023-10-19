@@ -88,7 +88,7 @@ class CatalogController extends Controller
                 $catalog->price = $request->price;
                 $catalog->picture = $rename;
                 $catalog->save();
-                return redirect()->route('dashboard.create')->with('success','Produk created successfully.');;
+                return redirect()->route('catalog.index')->with('success','Produk created successfully.');;
             }
     
             return redirect()->back()->with('message', 'Error, file tidak dapat di upload');

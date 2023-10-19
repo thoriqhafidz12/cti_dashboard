@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>COCOTARU</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="Assets/style.css">
+    <link rel="stylesheet" href="{{ asset('Assets/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="Assets/logo.png">
+    <link rel="icon" type="image/x-icon" href="{{ asset('Assets/logo.png') }}">
   <body>
     @include('landing.nav')
 
@@ -27,19 +27,19 @@
             <div class="col-sm-9 p-2">
               <div class="row d-flex justify-content-center my-0">
                 <div class="col-auto px-2">
-                  <img src="Assets/youtube.png" alt="ytLogo" width="27px" height="19px">
+                  <img src="{{ asset('Assets/youtube.png') }}" alt="ytLogo" width="27px" height="19px">
                 </div>
                 <div class="col-auto px-2">
-                  <img src="Assets/linkedin.png" alt="" width="23px" height="23px">
+                  <img src="{{ asset('Assets/linkedin.png') }}" alt="" width="23px" height="23px">
                 </div>
                 <div class="col-auto px-2">
-                  <img src="Assets/instagram.png" alt="" width="23px" height="23px">
+                  <img src="{{ asset('Assets/instagram.png') }}" alt="" width="23px" height="23px">
                 </div>
                 <div class="col-auto px-2">
-                  <img src="Assets/facebook.png" alt="" width="23px" height="23px">
+                  <img src="{{ asset('Assets/facebook.png') }}" alt="" width="23px" height="23px">
                 </div>
                 <div class="col-auto px-2">
-                  <img src="Assets/tiktok.png" alt="" width="20px" height="23px">
+                  <img src="{{ asset('Assets/tiktok.png') }}" alt="" width="20px" height="23px">
                 </div>
               </div>
             </div>

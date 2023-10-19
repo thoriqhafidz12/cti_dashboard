@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-light sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="Assets\logo_cocotaru.png" alt="Logo" width="200" height="auto" class="img-nav">
+        <img src="{{ asset('Assets\logo_cocotaru.png') }}" alt="Logo" width="200" height="auto" class="img-nav">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -11,7 +11,7 @@
           <div class="col-12">
               <ul class="navbar-nav float-none float-md-end">
                 <li class="nav-item">
-                  <a class="nav-link about-us-link" aria-current="page" href="/">About Us</a>
+                  <a class="nav-link about-us-link {{ ($active === "About Us") ? 'nav-on' : '' }}" aria-current="page" href="/">About Us</a>
                 </li>
                 {{-- <li class="nav-item">
                   <a class="nav-link about-us-link" href="#products">Products</a>
@@ -20,13 +20,13 @@
                   <a class="nav-link about-us-link" href="#values">Values</a>
                 </li> --}}
                 <li class="nav-item">
-                  <a class="nav-link about-us-link" href="{{ route('catalog') }}">Catalog</a>
+                  <a class="nav-link about-us-link {{ ($active === "catalog") ? 'nav-on' : '' }}" href="{{ route('catalog') }}">Catalog</a>
                 </li>
       
                 {{--VIEW KERANJANG  --}}
                 @can('admin')
                 <li class="nav-item">
-                  <a class="nav-link about-us-link" href="{{ route('keranjang') }}">Keranjang</a>
+                  <a class="nav-link about-us-link {{ ($active === "keranjang") ? 'nav-on' : '' }}" href="{{ route('keranjang') }}">Keranjang</a>
                 </li>
                 @endcan
                 {{-- <li class="nav-item">

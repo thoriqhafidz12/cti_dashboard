@@ -27,7 +27,7 @@ class KeranjangController extends Controller
 
         $total = array_sum(array_column($dummyItems, 'subtotal'));
 
-        return view('landing.keranjang', compact('dummyItems', 'total'));
+        return view('landing.keranjang', compact('dummyItems', 'total'), ['active'=>'keranjang']);
     }
     
     public function checkout(){

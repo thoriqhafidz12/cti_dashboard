@@ -20,6 +20,7 @@ use App\Http\Controllers\RegisterController;
 
 Route::get('/', [LandingController::class, 'index'])->name('landing');
 Route::get('/catalog', [LandingController::class,'catalog'])->name('catalog');
+Route::get('/catalog/list', [LandingController::class,'list'])->name('list');
 
 Route::get('/login', [LoginController::class, 'login_form'])->name('login_form');
 Route::post('/login', [LoginController::class, 'login'])->name('login');

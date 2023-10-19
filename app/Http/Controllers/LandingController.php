@@ -12,10 +12,20 @@ use Illuminate\Support\Facades\File;
 class LandingController extends Controller
 {
     public function index(){
-        return view('landing.profile');
+        return view('landing.profile',[
+            'active'=>'About Us'
+        ]);
     }
     public function catalog(){
-        $catalogs = CatalogModel::latest()->paginate(10);
-        return view('landing.catalog',compact('catalogs'));
+        return view('landing.catalog',[
+            'active'=>'catalog'
+        ]);
+    }
+
+    public function list(){
+        $catalogs= CatalogModel::latest()->paginate(10);
+        return view ('landing.shop.list',compact('catalogs'),[
+            'active'=>'catalog'
+        ]);
     }
 }
